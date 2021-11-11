@@ -1,0 +1,26 @@
+<resources>
+  <string name="app_name">Amaztwo</string>
+  <string name="app_version">v1.0</string>
+  <string name="cart_count_placeholder">%d</string>
+  <string name="product_title_placeholder">A product title</string>
+  <string name="product_id_placeholder">id#%d</string>
+  <string name="product_shortDesc_placeholder">This is short desc.</string>
+  <string name="product_longDesc_placeholder">Ths is a pretty long description you know. Very long.</string>
+  <string name="product_price_placeholder">%.2f €</string>
+  <string name="product_stock_status_placeholder">In stock. (%d)</string>
+  <string name="product_stock_status_unavailable_placeholder">Currently unavailable.</string>
+  <string name="product_add_to_cart_btn">Add to cart</string>
+  <string name="product_return_btn">Return</string>
+  <string name="product_comment_placeholder">Leave a comment</string>
+  <string name="product_quantity_placeholder">x%d</string>
+  <string name="comment_username_placeholder">Baptiste Martinet</string>
+  <string name="comment_text_placeholder">This is a test comment. Have a nice day. I am simply trying to get this on two lines.</string>
+  <string name="cart_nb_items_placeholder">%d item(s)</string>
+  <string name="cart_total_cost">Total (EUR)</string>
+  <string name="cart_amount">%.2f €</string>
+  <string name="cart_checkout_button">Checkout</string>
+  <string name="review_textview_title"><u>Leave a review:</u></string>
+  <string name="review_edittext_hint">Tell us what you think.</string>
+  <string name="review_button_send">Send</string>
+  <string name="professor_name">Abubakr Siddig</string>
+</resources>

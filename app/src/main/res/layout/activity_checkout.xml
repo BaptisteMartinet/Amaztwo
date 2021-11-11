@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".CheckoutActivity">
+
+  <fragment
+    android:id="@+id/menuFragment"
+    android:name="griffith.baptiste.martinet.amaztwo.MenuFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="FragmentTagUsage" />
+
+  <ImageView
+    android:layout_width="200dp"
+    android:layout_height="100dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="5dp"
+    android:scaleType="fitXY"
+    android:src="@drawable/fake_ad"
+    tools:ignore="ContentDescription" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+      android:id="@+id/cartNbItems"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/cart_nb_items_placeholder"
+      android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/cartRecyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:padding="2dp"
+      android:scrollbars="vertical"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/cart_total_cost" />
+
+      <TextView
+        android:id="@+id/cartTotalCost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/cart_amount"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+      android:id="@+id/cartCheckoutBtn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:text="@string/cart_checkout_button" />
+  </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".MainActivity">
+
+  <fragment
+    android:id="@+id/menuFragment"
+    android:name="griffith.baptiste.martinet.amaztwo.MenuFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="FragmentTagUsage" />
+
+  <SearchView
+    android:id="@+id/searchView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
+    android:focusable="false"
+    android:iconifiedByDefault="false"
+    android:queryHint="Search Here" />
+
+  <GridView
+    android:id="@+id/gridView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:horizontalSpacing="3dp"
+    android:numColumns="auto_fit"
+    android:verticalSpacing="3dp" />
+</LinearLayout>
+

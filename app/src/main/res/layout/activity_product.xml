@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".ProductActivity">
+
+  <fragment
+    android:id="@+id/menuFragment"
+    android:name="griffith.baptiste.martinet.amaztwo.MenuFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="FragmentTagUsage" />
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <ImageView
+            android:id="@+id/picture"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/product_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+          <TextView
+            android:id="@+id/title"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/product_title_placeholder"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/picture"
+            app:layout_constraintTop_toTopOf="parent" />
+
+          <TextView
+            android:id="@+id/productId"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/product_id_placeholder"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@+id/picture"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+          <RatingBar
+            android:id="@+id/rating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressTint="#ffb300"
+            android:rating="2.5"
+            android:stepSize="0.5"
+            app:layout_constraintStart_toEndOf="@+id/picture"
+            app:layout_constraintTop_toBottomOf="@+id/productId" />
+
+          <TextView
+            android:id="@+id/price"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/product_price_placeholder"
+            android:textColor="#b82704"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/picture"
+            app:layout_constraintTop_toBottomOf="@+id/rating" />
+
+          <TextView
+            android:id="@+id/stockStatus"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/product_stock_status_placeholder"
+            android:textColor="#007600"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/picture"
+            app:layout_constraintTop_toBottomOf="@+id/price" />
+
+          <TextView
+            android:id="@+id/shortDesc"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/product_shortDesc_placeholder"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toEndOf="@+id/picture"
+            app:layout_constraintTop_toBottomOf="@+id/stockStatus"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+          android:id="@+id/longDesc"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:text="@string/product_longDesc_placeholder"
+          android:textSize="18sp" />
+
+        <Button
+          android:id="@+id/addToCartBtn"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:text="@string/product_add_to_cart_btn" />
+      </LinearLayout>
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#dddddd" />
+
+      <griffith.baptiste.martinet.amaztwo.NonScrollListView
+        android:id="@+id/commentsListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:paddingHorizontal="5dp" />
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>
